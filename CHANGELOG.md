@@ -1,3 +1,10 @@
+## [3.0.1](https://github.com/abdolian/abdolian-test-01/compare/v3.0.0...v3.0.1) (2023-12-01)
+
+
+### Bug Fixes
+
+* change the name ([b2ce5e0](https://github.com/abdolian/abdolian-test-01/commit/b2ce5e056253ed64f04c7147ee8fece35ac66e68))
+
 # [3.0.0](https://github.com/abdolian/abdolian-test-01/compare/v2.2.3...v3.0.0) (2023-12-01)
 
 
