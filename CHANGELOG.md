@@ -1,3 +1,15 @@
+# [3.0.0](https://github.com/abdolian/abdolian-test-01/compare/v2.2.3...v3.0.0) (2023-12-01)
+
+
+### Features
+
+* allow provided config object to extend other configs ([afbe704](https://github.com/abdolian/abdolian-test-01/commit/afbe70467babf750dc5df55e4cff52ce3d9170b9))
+
+
+### BREAKING CHANGES
+
+* `extends` key in config file is now used for extending other config files
+
 ## [2.2.3](https://github.com/abdolian/abdolian-test-01/compare/v2.2.2...v2.2.3) (2023-12-01)
 
 
