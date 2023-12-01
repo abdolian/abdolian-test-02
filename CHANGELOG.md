@@ -1,3 +1,10 @@
+## [3.1.1](https://github.com/abdolian/abdolian-test-01/compare/v3.1.0...v3.1.1) (2023-12-01)
+
+
+### Bug Fixes
+
+* update and close [#1](https://github.com/abdolian/abdolian-test-01/issues/1) ([5ce6159](https://github.com/abdolian/abdolian-test-01/commit/5ce6159e18fca698aeb5f00cc16461ffee61f419))
+
 # [3.1.0](https://github.com/abdolian/abdolian-test-01/compare/v3.0.2...v3.1.0) (2023-12-01)
 
 
