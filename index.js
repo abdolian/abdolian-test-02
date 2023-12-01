@@ -1,4 +1,4 @@
-function sayHello9(name) {
+function sayHello10(name) {
   return `Hi, ${name}!!!`;
 }
-module.exports = sayHello9;
+module.exports = sayHello10;
