@@ -8,7 +8,17 @@
     [
       "@semantic-release/changelog",
       {
-        "changelogFile": "CHANGELOG.md"
+        "changelogFile": "CHANGELOG.md",
+        "types": [
+          {"type": "feat", "section": "Features"},
+          {"type": "fix", "section": "Bug Fixes"},
+          {"type": "chore", "hidden": "Chore"},
+          {"type": "docs", "hidden": "Docs"},
+          {"type": "style", "hidden": "Style"},
+          {"type": "refactor", "hidden": "Refactor"},
+          {"type": "perf", "hidden": "Perf"},
+          {"type": "test", "hidden": "Test"}
+      ]
       }
     ],
     [
