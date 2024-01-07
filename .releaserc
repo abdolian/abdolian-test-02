@@ -23,7 +23,7 @@
           {"type": "refactor", "hidden": false, "section": "Refactor"},
           {"type": "perf", "hidden": false, "section": "Perf"},
           {"type": "test", "hidden": false, "section": "Test"}
-      ]
+        ]
       }
     ],
     [
