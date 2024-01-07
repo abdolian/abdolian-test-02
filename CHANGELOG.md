@@ -1,3 +1,10 @@
+## [3.1.2](https://github.com/abdolian/abdolian-test-01/compare/v3.1.1...v3.1.2) (2023-12-01)
+
+
+### Bug Fixes
+
+* **index.js:** teeeeeeext resolve [#2](https://github.com/abdolian/abdolian-test-01/issues/2) ([3cbc761](https://github.com/abdolian/abdolian-test-01/commit/3cbc7612436b7db8dd6e1ebd3fcbd90182ea87f3))
+
 ## [3.1.1](https://github.com/abdolian/abdolian-test-01/compare/v3.1.0...v3.1.1) (2023-12-01)
 
 
