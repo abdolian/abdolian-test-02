@@ -13,17 +13,7 @@
     [
       "@semantic-release/changelog",
       {
-        "changelogFile": "CHANGELOG.md",
-        "types": [
-          {"type": "feat", "section": "Features"},
-          {"type": "fix", "section": "Bug Fixes"},
-          {"type": "chore", "hidden": false, "section": "Chore"},
-          {"type": "docs", "hidden": false, "section": "Docs"},
-          {"type": "style", "hidden": false, "section": "Style"},
-          {"type": "refactor", "hidden": false, "section": "Refactor"},
-          {"type": "perf", "hidden": false, "section": "Perf"},
-          {"type": "test", "hidden": false, "section": "Test"}
-        ]
+        "changelogFile": "CHANGELOG.md"
       }
     ],
     [
