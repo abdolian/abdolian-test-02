@@ -1,3 +1,15 @@
+# [3.2.0](https://github.com/abdolian/abdolian-test-01/compare/v3.1.2...v3.2.0) (2024-01-07)
+
+
+### Bug Fixes
+
+* Commit message 01 ([cab75a5](https://github.com/abdolian/abdolian-test-01/commit/cab75a54a0fda626e8d76b71b56ed78a1a369995))
+
+
+### Features
+
+* Commit message 02 ([81ed84a](https://github.com/abdolian/abdolian-test-01/commit/81ed84ae828ea3f1fbc5040478fda445b26e94a3))
+
 ## [3.1.2](https://github.com/abdolian/abdolian-test-01/compare/v3.1.1...v3.1.2) (2023-12-01)
 
 
