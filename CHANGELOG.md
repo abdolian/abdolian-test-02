@@ -1,3 +1,10 @@
+# [3.4.0](https://github.com/abdolian/abdolian-test-01/compare/v3.3.0...v3.4.0) (2024-01-07)
+
+
+### Features
+
+* test ([ccb5553](https://github.com/abdolian/abdolian-test-01/commit/ccb555370112d8f88cd0b1e38079ebab71cefe47))
+
 # [3.3.0](https://github.com/abdolian/abdolian-test-01/compare/v3.2.0...v3.3.0) (2024-01-07)
 
 
