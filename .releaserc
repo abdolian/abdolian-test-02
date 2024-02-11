@@ -28,10 +28,7 @@
       }
     ],
     [
-      "@semantic-release/github",
-      {
-        "assets": "ddd"
-      }
+      "@semantic-release/github"
     ]
   ]
 }
