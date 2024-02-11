@@ -1,3 +1,16 @@
+# [4.2.0](https://github.com/abdolian/abdolian-test-01/compare/v4.1.0...v4.2.0) (2024-02-11)
+
+
+### Bug Fixes
+
+* add package.json file ([a048336](https://github.com/abdolian/abdolian-test-01/commit/a048336477f9a1b1e2f8964b428dfeecc04c29d2))
+
+
+### Features
+
+* add ddd folder ([f008c2b](https://github.com/abdolian/abdolian-test-01/commit/f008c2b1ad5e5f936cd6ee56462a000d5d2e1c5b))
+* update index.js in ddd folder ([4871b1e](https://github.com/abdolian/abdolian-test-01/commit/4871b1e644a1c06a5ec0257b7e3d47975d634681))
+
 # [4.1.0](https://github.com/abdolian/abdolian-test-01/compare/v4.0.2...v4.1.0) (2024-01-07)
 
 
