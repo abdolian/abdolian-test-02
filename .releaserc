@@ -4,15 +4,7 @@
   ],
   "plugins": [
     [
-      "@semantic-release/commit-analyzer",
-      {
-        "preset": "conventionalcommits",
-        "releaseRules": [
-          { "type": "docs", "scope": "README", "release": "patch" },
-          { "type": "refactor", "release": "patch" },
-          { "type": "style", "release": "patch" }
-        ]
-      }
+      "@semantic-release/commit-analyzer"
     ],
     "@semantic-release/release-notes-generator",
     [
@@ -29,7 +21,12 @@
         ]
       }
     ],
-    "@semantic-release/npm",
+    [
+      "@semantic-release/npm",
+      {
+        "pkgRoot": "ddd"
+      }
+    ],
     "@semantic-release/github"
   ]
 }
