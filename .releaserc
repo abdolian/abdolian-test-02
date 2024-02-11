@@ -27,6 +27,11 @@
         "pkgRoot": "ddd"
       }
     ],
-    "@semantic-release/github"
+    [
+      "@semantic-release/github",
+      {
+        "assets": "dist"
+      }
+    ]
   ]
 }

@@ -10,9 +10,6 @@
     "type": "git",
     "url": "git+https://github.com/abdolian/abdolian-test-01.git"
   },
-  "files": [
-    "index.js"
-  ],
   "keywords": [],
   "author": "",
   "license": "ISC",
