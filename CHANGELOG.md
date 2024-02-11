@@ -1,3 +1,10 @@
+## [4.2.1](https://github.com/abdolian/abdolian-test-01/compare/v4.2.0...v4.2.1) (2024-02-11)
+
+
+### Bug Fixes
+
+* Add assets property to github plugin ([4f8eca6](https://github.com/abdolian/abdolian-test-01/commit/4f8eca6bca393f0133c60eccd41a664d1055113c))
+
 # [4.2.0](https://github.com/abdolian/abdolian-test-01/compare/v4.1.0...v4.2.0) (2024-02-11)
 
 
