@@ -1,3 +1,10 @@
+## [4.2.3](https://github.com/abdolian/abdolian-test-01/compare/v4.2.2...v4.2.3) (2024-02-11)
+
+
+### Bug Fixes
+
+* update configs ([d4a36db](https://github.com/abdolian/abdolian-test-01/commit/d4a36db8aa93c5c80f34f43bb9750d671b044f16))
+
 ## [4.2.2](https://github.com/abdolian/abdolian-test-01/compare/v4.2.1...v4.2.2) (2024-02-11)
 
 
