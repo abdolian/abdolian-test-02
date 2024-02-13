@@ -1,3 +1,10 @@
+# [4.3.0-next.7](https://github.com/abdolian/abdolian-test-01/compare/v4.3.0-next.6...v4.3.0-next.7) (2024-02-13)
+
+
+### Features
+
+* 6 ([c6f2d9d](https://github.com/abdolian/abdolian-test-01/commit/c6f2d9dc101cac2ffa197c64b73b1f5ae34223d8))
+
 # [4.3.0-next.3](https://github.com/abdolian/abdolian-test-01/compare/v4.3.0-next.2...v4.3.0-next.3) (2024-02-13)
 
 
