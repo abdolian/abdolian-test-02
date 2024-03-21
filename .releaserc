@@ -62,18 +62,15 @@
           "types": [
             {
               "type": "build",
-              "hidden": true,
-              "section": ""
+              "hidden": true
             },
             {
               "type": "chore",
-              "hidden": true,
-              "section": ""
+              "hidden": true
             },
             {
               "type": "ci",
-              "hidden": true,
-              "section": ""
+              "hidden": true
             },
             {
               "type": "docs",
@@ -92,23 +89,19 @@
             },
             {
               "type": "perf",
-              "hidden": false,
-              "section": "Other Changes"
+              "hidden": false
             },
             {
               "type": "refactor",
-              "hidden": false,
-              "section": "Other Changes"
+              "hidden": false
             },
             {
               "type": "style",
-              "hidden": false,
-              "section": "Other Changes"
+              "hidden": false
             },
             {
               "type": "test",
-              "hidden": true,
-              "section": ""
+              "hidden": true
             }
           ]
         }
