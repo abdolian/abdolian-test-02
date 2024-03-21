@@ -18,7 +18,7 @@
           },
           {
             "type": "chore",
-            "release": "minor"
+            "release": false
           },
           {
             "type": "ci",
@@ -61,19 +61,54 @@
         "presetConfig": {
           "types": [
             {
+              "type": "build",
+              "hidden": true,
+              "section": ""
+            },
+            {
               "type": "chore",
-              "section": "Other Changes",
-              "hidden": false
+              "hidden": true,
+              "section": ""
+            },
+            {
+              "type": "ci",
+              "hidden": true,
+              "section": ""
+            },
+            {
+              "type": "docs",
+              "hidden": false,
+              "section": "Other Changes"
+            },
+            {
+              "type": "feat",
+              "hidden": false,
+              "section": "Features"
+            },
+            {
+              "type": "fix",
+              "hidden": false,
+              "section": "Bug Fixes"
             },
             {
               "type": "perf",
-              "section": "Performance Improvements",
-              "hidden": false
+              "hidden": true,
+              "section": ""
             },
             {
               "type": "refactor",
-              "section": "Code Improvements",
-              "hidden": false
+              "hidden": true,
+              "section": ""
+            },
+            {
+              "type": "style",
+              "hidden": true,
+              "section": ""
+            },
+            {
+              "type": "test",
+              "hidden": true,
+              "section": ""
             }
           ]
         }
