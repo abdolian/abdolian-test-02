@@ -1,3 +1,5 @@
+## [4.3.1](https://github.com/abdolian/abdolian-test-01/compare/v4.3.0...v4.3.1) (2024-03-21)
+
 # [4.3.0](https://github.com/abdolian/abdolian-test-01/compare/v4.2.6...v4.3.0) (2024-03-21)
 
 ## [4.2.6](https://github.com/abdolian/abdolian-test-01/compare/v4.2.5...v4.2.6) (2024-03-21)
