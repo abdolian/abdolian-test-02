@@ -68,57 +68,57 @@
             {
               "type": "build",
               "hidden": true,
-              "section": "A"
+              "section": ""
             },
             {
               "type": "chore",
               "hidden": true,
-              "section": "A"
+              "section": ""
             },
             {
               "type": "ci",
               "hidden": true,
-              "section": "A"
+              "section": ""
             },
             {
               "type": "docs",
               "hidden": false,
-              "section": ""
+              "section": "Other Changes"
             },
             {
               "type": "feat",
               "hidden": false,
-              "section": "AB"
+              "section": "Features"
             },
             {
               "type": "fix",
               "hidden": false,
-              "section": "A"
+              "section": "Bug Fixes"
             },
             {
               "type": "perf",
               "hidden": false,
-              "section": "A"
+              "section": "Other Changes"
             },
             {
               "type": "refactor",
               "hidden": false,
-              "section": "A"
+              "section": "Other Changes"
             },
             {
               "type": "revert",
               "hidden": true,
-              "section": "A"
+              "section": ""
             },
             {
               "type": "style",
               "hidden": false,
-              "section": "A"
+              "section": "Other Changes"
             },
             {
               "type": "test",
               "hidden": true,
-              "section": "A"
+              "section": ""
             }
           ]
         }
