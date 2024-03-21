@@ -83,7 +83,7 @@
             {
               "type": "docs",
               "hidden": false,
-              "section": "Other Changes"
+              "section": "Changes"
             },
             {
               "type": "feat",
@@ -98,12 +98,12 @@
             {
               "type": "perf",
               "hidden": false,
-              "section": "Other Changes"
+              "section": "Changes"
             },
             {
               "type": "refactor",
               "hidden": false,
-              "section": "Other Changes"
+              "section": "Changes"
             },
             {
               "type": "revert",
@@ -113,7 +113,7 @@
             {
               "type": "style",
               "hidden": false,
-              "section": "Other Changes"
+              "section": "Changes"
             },
             {
               "type": "test",
