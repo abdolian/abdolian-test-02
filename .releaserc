@@ -83,12 +83,12 @@
             {
               "type": "docs",
               "hidden": false,
-              "section": "A"
+              "section": ""
             },
             {
               "type": "feat",
               "hidden": false,
-              "section": "A"
+              "section": "AB"
             },
             {
               "type": "fix",
