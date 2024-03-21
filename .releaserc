@@ -45,12 +45,16 @@
             "release": "patch"
           },
           {
+            "type": "revert",
+            "release": "patch"
+          },
+          {
             "type": "style",
             "release": "patch"
           },
           {
             "type": "test",
-            "release": "patch"
+            "release": false
           }
         ]
       }
@@ -61,15 +65,61 @@
         "preset": "conventionalcommits",
         "presetConfig": {
           "types": [
-            { "type": "feat", "section": "Features1" },
-            { "type": "fix", "section": "Bug Fixes1" },
-            { "type": "docs", "section": "Documentation1" },
-            { "type": "style", "section": "Styles1" },
-            { "type": "refactor", "section": "Code Refactoring1" },
-            { "type": "perf", "section": "Performance Improvements1" },
-            { "type": "test", "section": "Tests1" },
-            { "type": "chore", "section": "Miscellaneous Chores1" },
-            { "type": "revert", "section": "Reverts1" }
+            {
+              "type": "build",
+              "hidden": true,
+              "section": "A"
+            },
+            {
+              "type": "chore",
+              "hidden": true,
+              "section": "A"
+            },
+            {
+              "type": "ci",
+              "hidden": true,
+              "section": "A"
+            },
+            {
+              "type": "docs",
+              "hidden": false,
+              "section": "A"
+            },
+            {
+              "type": "feat",
+              "hidden": false,
+              "section": "A"
+            },
+            {
+              "type": "fix",
+              "hidden": false,
+              "section": "A"
+            },
+            {
+              "type": "perf",
+              "hidden": false,
+              "section": "A"
+            },
+            {
+              "type": "refactor",
+              "hidden": false,
+              "section": "A"
+            },
+            {
+              "type": "revert",
+              "hidden": true,
+              "section": "A"
+            },
+            {
+              "type": "style",
+              "hidden": false,
+              "section": "A"
+            },
+            {
+              "type": "test",
+              "hidden": true,
+              "section": "A"
+            }
           ]
         }
       }
