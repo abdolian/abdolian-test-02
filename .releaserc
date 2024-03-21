@@ -50,7 +50,7 @@
           },
           {
             "type": "test",
-            "release": false
+            "release": "patch"
           }
         ]
       }
