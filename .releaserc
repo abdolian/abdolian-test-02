@@ -92,18 +92,18 @@
             },
             {
               "type": "perf",
-              "hidden": true,
-              "section": ""
+              "hidden": false,
+              "section": "Other Changes"
             },
             {
               "type": "refactor",
-              "hidden": true,
-              "section": ""
+              "hidden": false,
+              "section": "Other Changes"
             },
             {
               "type": "style",
-              "hidden": true,
-              "section": ""
+              "hidden": false,
+              "section": "Other Changes"
             },
             {
               "type": "test",
