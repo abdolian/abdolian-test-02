@@ -1,3 +1,10 @@
+## [4.3.7](https://github.com/abdolian/abdolian-test-01/compare/v4.3.6...v4.3.7) (2024-03-21)
+
+
+### Performance Improvements
+
+* 12 ([5ff6955](https://github.com/abdolian/abdolian-test-01/commit/5ff69551b610a35f175973563de90b056f762563))
+
 ## [4.3.6](https://github.com/abdolian/abdolian-test-01/compare/v4.3.5...v4.3.6) (2024-03-21)
 
 ## [4.3.5](https://github.com/abdolian/abdolian-test-01/compare/v4.3.4...v4.3.5) (2024-03-21)
