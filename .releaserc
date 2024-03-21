@@ -58,6 +58,7 @@
     [
       "@semantic-release/release-notes-generator",
       {
+        "preset": "angular",
         "presetConfig": {
           "types": [
             {
@@ -74,7 +75,8 @@
             },
             {
               "type": "docs",
-              "hidden": false
+              "hidden": false,
+              "section": "docs"
             },
             {
               "type": "feat",
