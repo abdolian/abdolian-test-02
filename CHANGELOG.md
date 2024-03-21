@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/abdolian/abdolian-test-02/compare/v1.0.0...v1.0.1) (2024-03-21)
+
+
+### Changes
+
+* 1 ([afde41c](https://github.com/abdolian/abdolian-test-02/commit/afde41c6101b26b2231d07c03c60fefae6e8a5cb))
+
 ## 1.0.0 (2024-03-21)
 
 
