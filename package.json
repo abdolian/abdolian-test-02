@@ -6,7 +6,7 @@
   "main": "./dist/client/index.js",
   "types": "./dist/client/index.d.ts",
   "files": [
-    "./dist/**/*.*",
+    "./dist/*",
     "./package.json",
     "./README.md"
   ],
