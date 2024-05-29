@@ -139,10 +139,7 @@
       }
     ],
     [
-      "@semantic-release/npm",
-      {
-        "pkgRoot": "ddd"
-      }
+      "@semantic-release/npm"
     ],
     [
       "@semantic-release/github"
