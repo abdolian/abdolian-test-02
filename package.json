@@ -1,38 +1,46 @@
 {
   "name": "abdolian-test-02",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "sideEffects": false,
+  "type": "module",
   "files": [
-    "**/*.*"
-  ], 
-  "publishConfig": {
-    "directory": "ddd"
+    "./dist/**/*.*"
+  ],
+  "scripts": {
+    "build": "npm run clean && tsc && node scripts/build.post.js",
+    "build:watch": "tsc -w",
+    "clean": "rimraf dist",
+    "development:start": "tsx src/development/scripts.start.ts",
+    "development:build": "tsx src/development/scripts.build.ts",
+    "development:build:watch": "tsx watch src/development/scripts.build.ts",
+    "format": "prettier --write ."
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/abdolian/abdolian-test-02.git"
+  "dependencies": {
+    "@babel/generator": "^7.23.6",
+    "@babel/parser": "^7.23.9",
+    "@babel/template": "^7.23.9",
+    "@babel/traverse": "^7.23.9",
+    "@babel/types": "^7.23.9",
+    "@types/node": "^20.11.20",
+    "change-case": "^5.4.3",
+    "fs-extra": "^11.2.0",
+    "glob": "^10.3.10",
+    "ora": "^8.0.1",
+    "typescript": "^4.9.5"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/abdolian/abdolian-test-02/issues"
-  },
-  "homepage": "https://github.com/abdolian/abdolian-test-02#readme",
   "devDependencies": {
     "@semantic-release/changelog": "^6.0.3",
     "@semantic-release/commit-analyzer": "^11.1.0",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^9.2.4",
-    "@semantic-release/npm": "^11.0.1",
+    "@semantic-release/github": "^9.2.6",
+    "@semantic-release/npm": "^11.0.2",
     "@semantic-release/release-notes-generator": "^12.1.0",
-    "semantic-release": "^22.0.8"
-  },
-  "dependencies": {
-    "conventional-changelog-conventionalcommits": "^7.0.2"
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "cpy": "^11.0.0",
+    "prettier": "^3.2.5",
+    "rimraf": "^5.0.5",
+    "semantic-release": "^23.0.2",
+    "tsx": "^4.7.1",
+    "vite": "^5.1.4"
   }
 }
