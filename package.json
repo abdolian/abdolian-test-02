@@ -7,7 +7,8 @@
   "types": "./dist/client/index.d.ts",
   "files": [
     "./dist/**/*.*",
-    "./package.json"
+    "./package.json",
+    "./README.md"
   ],
   "scripts": {
     "build": "npm run clean && tsc",
@@ -17,6 +18,9 @@
     "development:build": "tsx src/development/scripts.build.ts",
     "development:build:watch": "tsx watch src/development/scripts.build.ts",
     "format": "prettier --write ."
+  },
+  "publishConfig": {
+    "directory": "."
   },
   "dependencies": {
     "@babel/generator": "^7.23.6",
