@@ -18,10 +18,7 @@
     "development:build": "tsx src/development/scripts.build.ts",
     "development:build:watch": "tsx watch src/development/scripts.build.ts",
     "format": "prettier --write ."
-  },
-  "publishConfig": {
-    "directory": "."
-  },
+  }, 
   "dependencies": {
     "@babel/generator": "^7.23.6",
     "@babel/parser": "^7.23.9",
