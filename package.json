@@ -10,6 +10,20 @@
     "./package.json",
     "./README.md"
   ],
+  "exports":{
+    ".": {  
+      "import": "./dist/client/index.js", 
+      "types": "./dist/client/index.d.ts"  
+    },
+    "./bundlers/*": {  
+      "import": "./dist/bundlers/*.js", 
+      "types": "./dist/bundlers/*.d.ts"  
+    },
+    "./transformer": {  
+      "import": "./dist/transformer/index.js", 
+      "types": "./dist/transformer/index.d.ts"  
+    }
+  }, 
   "scripts": {
     "build": "npm run clean && tsc",
     "build:watch": "tsc -w",
