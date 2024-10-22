@@ -1,6 +1,6 @@
 {
   "name": "abdolian-test-02",
-  "version": "0.0.0",
+  "version": "1.6.2",
   "license": "MIT",
   "sideEffects": false,
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
@@ -44,7 +44,7 @@
     "custom elements",
     "design systems",
     "web components"
-  ], 
+  ],
   "dependencies": {
     "@babel/generator": "^7.24.10",
     "@babel/parser": "^7.24.8",
