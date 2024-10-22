@@ -1,6 +1,6 @@
 {
   "name": "abdolian-test-02",
-  "version": "1.0.0",
+  "version": "1.6.1",
   "sideEffects": false,
   "type": "module",
   "main": "./dist/client/index.js",
@@ -10,20 +10,20 @@
     "./package.json",
     "./README.md"
   ],
-  "exports":{
-    ".": {  
-      "import": "./dist/client/index.js", 
-      "types": "./dist/client/index.d.ts"  
+  "exports": {
+    ".": {
+      "import": "./dist/client/index.js",
+      "types": "./dist/client/index.d.ts"
     },
-    "./bundlers/*": {  
-      "import": "./dist/bundlers/*.js", 
-      "types": "./dist/bundlers/*.d.ts"  
+    "./bundlers/*": {
+      "import": "./dist/bundlers/*.js",
+      "types": "./dist/bundlers/*.d.ts"
     },
-    "./transformer": {  
-      "import": "./dist/transformer/index.js", 
-      "types": "./dist/transformer/index.d.ts"  
+    "./transformer": {
+      "import": "./dist/transformer/index.js",
+      "types": "./dist/transformer/index.d.ts"
     }
-  }, 
+  },
   "scripts": {
     "build": "npm run clean && tsc",
     "build:watch": "tsc -w",
@@ -32,7 +32,7 @@
     "development:build": "tsx src/development/scripts.build.ts",
     "development:build:watch": "tsx watch src/development/scripts.build.ts",
     "format": "prettier --write ."
-  }, 
+  },
   "dependencies": {
     "@babel/generator": "^7.23.6",
     "@babel/parser": "^7.23.9",
