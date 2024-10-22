@@ -1,6 +1,7 @@
 {
   "name": "abdolian-test-02",
   "version": "1.0.0",
+  "private":"false",
   "sideEffects": false,
   "type": "module",
   "main": "./dist/client/index.js",
