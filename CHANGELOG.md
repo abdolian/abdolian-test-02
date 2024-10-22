@@ -1,3 +1,9 @@
+## [2.1.1](https://github.com/abdolian/abdolian-test-02/compare/v2.1.0...v2.1.1) (2024-10-22)
+
+### Bug Fixes
+
+* changeset ([72b658d](https://github.com/abdolian/abdolian-test-02/commit/72b658d45f7bca02394a69aee6a1624c42858260))
+
 ## [2.1.0](https://github.com/abdolian/abdolian-test-02/compare/v2.0.0...v2.1.0) (2024-10-22) 
 
 ### ⚠ BREAKING CHANGES
