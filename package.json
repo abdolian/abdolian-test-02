@@ -9,10 +9,11 @@
   "files": [
     "./dist/*",
     "./package.json",
-    "./README.md"
+    "./README.md",
+    "./src/jsx-runtime.d.ts"
   ],
   "exports": {
-    "./bundlers": {
+    "./bundlers.js": {
       "import": "./dist/bundlers.js",
       "types": "./dist/bundlers.d.ts"
     },
@@ -20,11 +21,11 @@
       "import": "./dist/client.js",
       "types": "./dist/client.d.ts"
     },
-    "./internal": {
+    "./internal.js": {
       "import": "./dist/internal.js",
       "types": "./dist/internal.d.ts"
     },
-    "./transformer": {
+    "./transformer.js": {
       "import": "./dist/transformer.js",
       "types": "./dist/transformer.d.ts"
     },
