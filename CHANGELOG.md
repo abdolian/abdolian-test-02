@@ -1,3 +1,13 @@
+## [2.0.0](https://github.com/abdolian/abdolian-test-02/compare/v1.7.0...v2.0.0) (2024-10-22)
+
+### ⚠ BREAKING CHANGES
+
+* update
+
+### Bug Fixes
+
+* update ([b1e3ff7](https://github.com/abdolian/abdolian-test-02/commit/b1e3ff7ce95beba798a884e531357603421b93d5))
+
 ## [1.7.0](https://github.com/abdolian/abdolian-test-02/compare/v1.6.3...v1.7.0) (2024-10-22)
 
 ### ⚠ BREAKING CHANGES
