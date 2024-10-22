@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/abdolian/abdolian-test-02/compare/v1.6.2...v1.6.3) (2024-10-22)
+
+
+### Bug Fixes
+
+* add jsx ([f4eccbd](https://github.com/abdolian/abdolian-test-02/commit/f4eccbd31a95fc72ad7ff6ecf6a9b935c28a880d))
+
 ## [1.6.2](https://github.com/abdolian/abdolian-test-02/compare/v1.6.1...v1.6.2) (2024-10-22)
 
 
