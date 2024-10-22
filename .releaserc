@@ -62,10 +62,10 @@
       "@semantic-release/git"
     ],
     [
-      "@semantic-release/npm"
+      "@semantic-release/github"
     ],
     [
-      "@semantic-release/github"
+      "@semantic-release/npm"
     ]
   ]
 }
