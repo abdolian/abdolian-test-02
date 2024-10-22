@@ -187,6 +187,15 @@ export const customElement = (options?: CustomElementOptions): TransformerPlugin
                 for (const attribute of attributes) {
                   switch (attribute.type) {
                     case 'JSXAttribute':
+                      if (attribute.name.name == 'dangerouslySetInnerHTML') {
+                        try {
+                          parts.push(' ', '.innerHTML');
+                          parts.push('=');
+                          parts.push(attribute.value.expression.properties.at(0).value);
+                        } catch {}
+                        continue;
+                      }
+
                       parts.push(' ', attribute.name.name);
 
                       if (!attribute.value) continue;
@@ -286,32 +295,38 @@ export const customElement = (options?: CustomElementOptions): TransformerPlugin
 
         const [argument] = expression.arguments;
 
-        const filtered = argument.properties.filter((property) => {
-          return property.key.name != CONSTANTS.DECORATOR_PROPERTY_TYPE;
+        const property = argument.properties.find((property) => {
+          return property.key.name == CONSTANTS.DECORATOR_PROPERTY_TYPE;
         });
 
-        if (argument.properties.length != filtered.length) return;
-
-        argument.properties = filtered;
+        if (property) return;
 
         let type = 0;
 
         const extract = (input) => {
           switch (input?.type) {
+            case 'bool':
+            case 'Boolean':
             case 'BooleanLiteral':
+            case 'TSBooleanKeyword':
               type |= CONSTANTS.TYPE_BOOLEAN;
               break;
+            case 'Date':
+              type |= CONSTANTS.TYPE_DATE;
+              break;
+            case 'Number':
             case 'NumericLiteral':
+            case 'TSNumberKeyword':
               type |= CONSTANTS.TYPE_NUMBER;
               break;
             case 'StringLiteral':
               type |= CONSTANTS.TYPE_ENUM;
               break;
+            case 'TSStringKeyword':
+              type |= CONSTANTS.TYPE_STRING;
+              break;
             case 'TSArrayType':
               type |= CONSTANTS.TYPE_ARRAY;
-              break;
-            case 'TSBooleanKeyword':
-              type |= CONSTANTS.TYPE_BOOLEAN;
               break;
             case 'TSLiteralType':
               extract(input.literal);
@@ -319,15 +334,11 @@ export const customElement = (options?: CustomElementOptions): TransformerPlugin
             case 'TSNullKeyword':
               type |= CONSTANTS.TYPE_NULL;
               break;
-            case 'TSNumberKeyword':
-              type |= CONSTANTS.TYPE_NUMBER;
-              break;
+            case 'Object':
             case 'TSObjectKeyword':
               type |= CONSTANTS.TYPE_OBJECT;
               break;
-            case 'TSStringKeyword':
-              type |= CONSTANTS.TYPE_STRING;
-              break;
+            case 'Array':
             case 'TSTupleType':
               type |= CONSTANTS.TYPE_ARRAY;
               break;
@@ -335,47 +346,26 @@ export const customElement = (options?: CustomElementOptions): TransformerPlugin
               type |= CONSTANTS.TYPE_OBJECT;
               break;
             case 'TSTypeReference':
-              if (!input.typeName) break;
-              switch (input.typeName.name) {
-                case 'Array':
-                  type |= CONSTANTS.TYPE_ARRAY;
-                  break;
-                case 'Boolean':
-                  type |= CONSTANTS.TYPE_BOOLEAN;
-                  break;
-                case 'bool':
-                  type |= CONSTANTS.TYPE_BOOLEAN;
-                  break;
-                case 'Date':
-                  type |= CONSTANTS.TYPE_DATE;
-                  break;
-                case 'Number':
-                  type |= CONSTANTS.TYPE_NUMBER;
-                  break;
-                case 'Object':
-                  type |= CONSTANTS.TYPE_OBJECT;
-                  break;
-              }
+              extract({ type: input?.typeName?.name });
               break;
             case 'TSUnionType':
               input.types.forEach(extract);
               break;
-          }
+            // TODO
+            case 'TSParenthesizedType':
+              if (input?.typeAnnotation?.type != 'TSIntersectionType') break;
 
-          // TODO
-          if (
-            input?.type == 'TSParenthesizedType' &&
-            input?.typeAnnotation?.type == 'TSIntersectionType'
-          ) {
-            let types = input.types || input.typeAnnotation.types;
+              let types = input.types || input.typeAnnotation.types;
 
-            if (types.length != 2) return;
+              if (types.length != 2) return;
 
-            types = types.filter((type) => type.type != 'TSTypeLiteral');
+              types = types.filter((type) => type.type != 'TSTypeLiteral');
 
-            if (types.length != 1) return;
+              if (types.length != 1) return;
 
-            extract(types[0]);
+              extract(types[0]);
+
+              break;
           }
         };
 
@@ -475,6 +465,8 @@ export const customElement = (options?: CustomElementOptions): TransformerPlugin
           // prettier-ignore
           const ast = template.default.ast(
             `
+              // THE FOLLOWING TYPES HAVE BEEN ADDED AUTOMATICALLY
+
               export interface ${context.className}Attributes {
                 ${attributes.map(print).join('')}
               }

@@ -1,7 +1,10 @@
 {
   "name": "abdolian-test-02",
-  "version": "1.6.1",
+  "version": "0.0.0",
+  "license": "MIT",
   "sideEffects": false,
+  "author": "Masood Abdolian <m.abdolian@gmail.com>",
+  "description": "A powerful library for building scalable, reusable, fast, tastable and lightweight design system for any web technologies. Powerd by Web Component.",
   "type": "module",
   "main": "./dist/client/index.js",
   "types": "./dist/client/index.d.ts",
@@ -11,55 +14,79 @@
     "./README.md"
   ],
   "exports": {
-    ".": {
-      "import": "./dist/client/index.js",
-      "types": "./dist/client/index.d.ts"
+    "./bundlers": {
+      "import": "./dist/bundlers.js",
+      "types": "./dist/bundlers.d.ts"
     },
-    "./bundlers/*": {
-      "import": "./dist/bundlers/*.js",
-      "types": "./dist/bundlers/*.d.ts"
+    ".": {
+      "import": "./dist/client.js",
+      "types": "./dist/client.d.ts"
+    },
+    "./internal": {
+      "import": "./dist/internal.js",
+      "types": "./dist/internal.d.ts"
     },
     "./transformer": {
-      "import": "./dist/transformer/index.js",
-      "types": "./dist/transformer/index.d.ts"
-    }
+      "import": "./dist/transformer.js",
+      "types": "./dist/transformer.d.ts"
+    },
+    "./jsx-runtime": "./dist/jsx-runtime.d.ts"
   },
   "scripts": {
-    "build": "npm run clean && tsc",
-    "build:watch": "tsc -w",
+    "build": "npm run clean && rollup -c",
     "clean": "rimraf dist",
-    "development:start": "tsx src/development/scripts.start.ts",
-    "development:build": "tsx src/development/scripts.build.ts",
-    "development:build:watch": "tsx watch src/development/scripts.build.ts",
+    "development:start": "vite --config development/vite.config.js",
     "format": "prettier --write ."
   },
+  "engines": {
+    "node": ">= 20.10.0"
+  },
+  "keywords": [
+    "components",
+    "custom elements",
+    "design systems",
+    "web components"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/htmlplus/element.git"
+  },
+  "bugs": {
+    "url": "https://github.com/htmlplus/element/issues"
+  },
+  "homepage": "https://github.com/htmlplus/element#readme",
   "dependencies": {
-    "@babel/generator": "^7.23.6",
-    "@babel/parser": "^7.23.9",
-    "@babel/template": "^7.23.9",
-    "@babel/traverse": "^7.23.9",
-    "@babel/types": "^7.23.9",
-    "@types/node": "^20.11.20",
-    "change-case": "^5.4.3",
+    "@babel/generator": "^7.24.10",
+    "@babel/parser": "^7.24.8",
+    "@babel/template": "^7.24.7",
+    "@babel/traverse": "^7.24.8",
+    "@babel/types": "^7.24.9",
+    "@types/node": "^20.14.10",
+    "@types/react": "^18.3.3",
+    "change-case": "^5.4.4",
     "fs-extra": "^11.2.0",
-    "glob": "^10.3.10",
+    "glob": "^11.0.0",
     "ora": "^8.0.1",
-    "typescript": "^4.9.5"
+    "typescript": "^5.5.3"
   },
   "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.6",
     "@semantic-release/changelog": "^6.0.3",
-    "@semantic-release/commit-analyzer": "^12.0.0",
+    "@semantic-release/commit-analyzer": "^13.0.0",
     "@semantic-release/git": "^10.0.1",
-    "@semantic-release/github": "^10.0.5",
+    "@semantic-release/github": "^10.1.0",
     "@semantic-release/npm": "^12.0.1",
-    "@semantic-release/release-notes-generator": "^13.0.0",
+    "@semantic-release/release-notes-generator": "^14.0.1",
     "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "conventional-changelog-conventionalcommits": "^8.0.0",
-    "cpy": "^11.0.0",
-    "prettier": "^3.2.5",
-    "rimraf": "^5.0.5",
-    "semantic-release": "^23.0.2",
-    "tsx": "^4.7.1",
-    "vite": "^5.1.4"
+    "cpy": "^11.0.1",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "rollup": "^4.20.0",
+    "rollup-plugin-copy": "^3.5.0",
+    "rollup-plugin-dts": "^6.1.1",
+    "rollup-plugin-node-externals": "^7.1.2",
+    "semantic-release": "^24.0.0",
+    "tslib": "^2.6.3",
+    "vite": "^5.3.4"
   }
 }

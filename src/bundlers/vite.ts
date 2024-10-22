@@ -1,12 +1,13 @@
 import path from 'path';
 
+import * as CONSTANTS from '../constants/index.js';
 import { TransformerPlugin, transformer } from '../transformer/index.js';
 
-export const htmlplus = (...plugins: Array<TransformerPlugin>) => {
-  const { start, run, finish } = transformer(...plugins);
+export const vite = (...plugins: Array<TransformerPlugin>) => {
+  const { global, start, run, finish } = transformer(...plugins);
 
   return {
-    name: 'htmlplus',
+    name: CONSTANTS.KEY,
 
     async buildStart() {
       await start();
@@ -15,18 +16,31 @@ export const htmlplus = (...plugins: Array<TransformerPlugin>) => {
     async load(id) {
       if (!id.endsWith('.tsx')) return;
 
-      let { script, skipped, stylePath } = await run(id);
+      const context = await run(id);
 
-      if (skipped) return;
+      if (context.skipped) return;
 
-      if (script && stylePath) {
-        script = script.replace(path.basename(stylePath), `${path.basename(stylePath)}?inline`);
+      if (context.script && context.stylePath) {
+        context.script = context.script.replace(path.basename(context.stylePath), `$&?inline`);
       }
 
-      return script;
+      return context.script;
     },
 
-    async buildEnd() {
+    async writeBundle(options, bundles) {
+      // TODO
+      global.contexts.forEach((context) => {
+        Object.keys(bundles).forEach((key) => {
+          const { facadeModuleId, modules } = bundles[key];
+          if (!facadeModuleId?.startsWith(context.filePath)) return;
+          const id = Object.keys(modules).find((key) => {
+            return key.startsWith(context.stylePath || '');
+          });
+          if (!id) return;
+          context.styleContentTransformed = modules[id].code;
+        });
+      });
+
       await finish();
     }
   };

@@ -1,10 +1,10 @@
 import * as CONSTANTS from '../../constants/index.js';
 import { HTMLPlusElement } from '../../types/index.js';
 import { call } from './call.js';
-import { getStyles } from './getStyles.js';
+import { getTag } from './getTag.js';
 import { shadowRoot } from './shadowRoot.js';
 import { task } from './task.js';
-import { html, render } from './uhtml.js';
+import { render } from './uhtml.js';
 
 /**
  * Updates the DOM with a scheduled task.
@@ -46,23 +46,8 @@ export const request = (
     // Calls the lifecycle's callback before the rendering phase.
     call(target, CONSTANTS.LIFECYCLE_UPDATE, states);
 
-    // Calculates the template.
-    const template = () => {
-      // Calculates the markup.
-      const markup = call(target, CONSTANTS.METHOD_RENDER);
-
-      // Calculates the styles.
-      const styles = getStyles(target);
-
-      // Returns the markup if styles don't exist.
-      if (!styles) return markup;
-
-      // Returns the markup and styles together.
-      return html`<style>${styles}</style>${markup}`;
-    };
-
     // Renders template to the DOM.
-    render(shadowRoot(target), template);
+    render(shadowRoot(target), () => call(target, CONSTANTS.METHOD_RENDER));
 
     // Invokes requests' callback.
     stacks.forEach((state) => {
@@ -71,13 +56,74 @@ export const request = (
       });
     });
 
+    // TODO
+    (() => {
+      const raw = target.constructor[CONSTANTS.STATIC_STYLE];
+
+      if (!raw) return;
+
+      const regex1 = /this-([\w-]+)(?:-([\w-]+))?/g;
+      const regex2 = /(\s*\w+\s*:\s*(undefined|null)\s*;?)/g;
+      const regex3 = /global\s+[^{]+\{[^{}]*\{[^{}]*\}[^{}]*\}|global\s+[^{]+\{[^{}]*\}/g;
+
+      const hasGlobal = raw.includes('global');
+      const hasVariable = raw.includes('this-');
+
+      let localSheet = target[CONSTANTS.API_STYLE];
+      let globalSheet = target.constructor[CONSTANTS.API_STYLE];
+
+      if (!hasVariable && localSheet) return;
+
+      const parsed = raw
+        .replace(regex1, (match, key) => {
+          let value = target as any;
+
+          for (const section of key.split('-')) {
+            value = value?.[section];
+          }
+
+          return value;
+        })
+        .replace(regex2, '');
+
+      if (!localSheet) {
+        localSheet = new CSSStyleSheet();
+
+        target[CONSTANTS.API_STYLE] = localSheet;
+
+        shadowRoot(target)!.adoptedStyleSheets.push(localSheet);
+      }
+
+      const localStyle = parsed.replace(regex3, '');
+
+      localSheet.replaceSync(localStyle);
+
+      if (!hasGlobal || globalSheet) return;
+
+      if (!globalSheet) {
+        globalSheet = new CSSStyleSheet();
+
+        target.constructor[CONSTANTS.API_STYLE] = globalSheet;
+
+        document.adoptedStyleSheets.push(globalSheet);
+      }
+
+      const globalStyle = parsed
+        ?.match(regex3)
+        ?.join('')
+        ?.replaceAll('global', '')
+        ?.replaceAll(':host', getTag(target)!);
+
+      globalSheet.replaceSync(globalStyle);
+    })();
+
     // Calls the lifecycle's callback after the rendering phase.
     call(target, CONSTANTS.LIFECYCLE_UPDATED, states);
 
     // Clears stacks.
     stacks.clear();
 
-    // TODO: releated to the @Watch decorator.
+    // TODO: related to the @Watch decorator.
     target[CONSTANTS.API_RENDER_COMPLETED] = true;
   };
 

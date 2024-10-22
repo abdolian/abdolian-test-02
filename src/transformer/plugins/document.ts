@@ -227,7 +227,20 @@ export const document = (options?: DocumentOptions): TransformerPlugin => {
 
             const name = second.split(':')[0].trim();
 
-            const initializer = second.split(':').slice(1).join(':').replace(';', '').trim();
+            const initializerDefault = second.split(':').slice(1).join(':').replace(';', '').trim();
+
+            // TODO
+            const initializerTransformed = context.styleContentTransformed
+              ?.split(name)
+              ?.at(1)
+              ?.split(':')
+              ?.filter((section) => !!section)
+              ?.at(0)
+              ?.split(/;|}/)
+              ?.at(0)
+              ?.trim();
+
+            const initializer = initializerTransformed || initializerDefault;
 
             return {
               description,

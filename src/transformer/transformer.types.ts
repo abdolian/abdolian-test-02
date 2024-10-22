@@ -49,6 +49,7 @@ export interface TransformerPluginContext {
 
   // style
   styleContent?: string;
+  styleContentTransformed?: string;
   styleExtension?: string;
   styleName?: string;
   stylePath?: string;
