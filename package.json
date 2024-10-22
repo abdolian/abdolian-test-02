@@ -6,8 +6,6 @@
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
   "description": "A powerful library for building scalable, reusable, fast, tastable and lightweight design system for any web technologies. Powerd by Web Component.",
   "type": "module",
-  "main": "./dist/client/index.js",
-  "types": "./dist/client/index.d.ts",
   "files": [
     "./dist/*",
     "./package.json",
@@ -46,15 +44,7 @@
     "custom elements",
     "design systems",
     "web components"
-  ],
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/htmlplus/element.git"
-  },
-  "bugs": {
-    "url": "https://github.com/htmlplus/element/issues"
-  },
-  "homepage": "https://github.com/htmlplus/element#readme",
+  ], 
   "dependencies": {
     "@babel/generator": "^7.24.10",
     "@babel/parser": "^7.24.8",
