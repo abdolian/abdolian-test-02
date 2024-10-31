@@ -6,31 +6,28 @@
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
   "description": "A powerful library for building scalable, reusable, fast, tastable and lightweight design system for any web technologies. Powerd by Web Component.",
   "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/elements/index.js",
+      "types": "./dist/types/elements/index.d.ts"
+    },
+    "./*": {
+      "import": "./dist/elements/*",
+      "types": "./dist/types/elements/*/*.d.ts"
+    },
+    "./*/*": "./dist/elements/*/*",
+    "./config.js": {
+      "import": "./dist/core/config.js",
+      "types": "./dist/types/config/index.d.ts"
+    },
+    "./json/*": "./dist/json/*",
+    "./package.json": "./package.json"
+  },
   "files": [
     "./dist/*",
     "./package.json",
-    "./README.md",
-    "./src/jsx-runtime.d.ts"
+    "./README.md"
   ],
-  "exports": {
-    "./bundlers.js": {
-      "import": "./dist/bundlers.js",
-      "types": "./dist/bundlers.d.ts"
-    },
-    ".": {
-      "import": "./dist/client.js",
-      "types": "./dist/client.d.ts"
-    },
-    "./internal.js": {
-      "import": "./dist/internal.js",
-      "types": "./dist/internal.d.ts"
-    },
-    "./transformer.js": {
-      "import": "./dist/transformer.js",
-      "types": "./dist/transformer.d.ts"
-    },
-    "./jsx-runtime": "./dist/jsx-runtime.d.ts"
-  },
   "scripts": {
     "build": "npm run clean && rollup -c",
     "clean": "rimraf dist",
@@ -52,6 +49,7 @@
     "@babel/template": "^7.24.7",
     "@babel/traverse": "^7.24.8",
     "@babel/types": "^7.24.9",
+    "@htmlplus/ui": "^1.4.1",
     "@types/node": "^20.14.10",
     "@types/react": "^18.3.3",
     "change-case": "^5.4.4",
