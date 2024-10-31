@@ -1,3 +1,9 @@
+## [2.3.5](https://github.com/abdolian/abdolian-test-02/compare/v2.3.4...v2.3.5) (2024-10-31)
+
+### Bug Fixes
+
+* add exports without json/* ([4bb60f8](https://github.com/abdolian/abdolian-test-02/commit/4bb60f8ee407916c66f3b70d38a081acd6a5e142))
+
 ## [2.3.4](https://github.com/abdolian/abdolian-test-02/compare/v2.3.3...v2.3.4) (2024-10-31)
 
 ### Bug Fixes
