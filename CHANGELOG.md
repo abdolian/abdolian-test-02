@@ -1,3 +1,9 @@
+## [2.3.2](https://github.com/abdolian/abdolian-test-02/compare/v2.3.1...v2.3.2) (2024-10-31)
+
+### Bug Fixes
+
+* add config ([b553ea6](https://github.com/abdolian/abdolian-test-02/commit/b553ea600ef401c8a8d62d1d3a9bfded1b3207ce))
+
 ## [2.3.1](https://github.com/abdolian/abdolian-test-02/compare/v2.3.0...v2.3.1) (2024-10-31)
 
 ### Bug Fixes
