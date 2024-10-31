@@ -1,3 +1,9 @@
+## [2.2.1](https://github.com/abdolian/abdolian-test-02/compare/v2.2.0...v2.2.1) (2024-10-31)
+
+### Bug Fixes
+
+* only index ([a730c8d](https://github.com/abdolian/abdolian-test-02/commit/a730c8d35ccc507ed18402028c9b43494e802b98))
+
 ## [2.2.0](https://github.com/abdolian/abdolian-test-02/compare/v2.1.1...v2.2.0) (2024-10-31)
 
 ### Features
