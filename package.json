@@ -23,8 +23,8 @@
       "import": "./dist/core/config.js",
       "types": "./dist/types/config/index.d.ts"
     },
-    "./json/*.json": {
-      "import": "./dist/json/*.json",
+    "./json/document.json": {
+      "import": "./dist/json/document.json",
       "types": null
     },
     "./package.json": {
