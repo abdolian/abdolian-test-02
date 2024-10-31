@@ -1,3 +1,9 @@
+## [2.3.0](https://github.com/abdolian/abdolian-test-02/compare/v2.2.1...v2.3.0) (2024-10-31)
+
+### Features
+
+* add elements output ([9a7dc30](https://github.com/abdolian/abdolian-test-02/commit/9a7dc3065631dc1f4fadc6a794104599db10b209))
+
 ## [2.2.1](https://github.com/abdolian/abdolian-test-02/compare/v2.2.0...v2.2.1) (2024-10-31)
 
 ### Bug Fixes
