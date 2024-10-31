@@ -1,6 +1,6 @@
 {
   "name": "abdolian-test-02",
-  "version": "2.2.1",
+  "version": "2.2.0",
   "license": "MIT",
   "sideEffects": false,
   "author": "Masood Abdolian <m.abdolian@gmail.com>",
@@ -10,6 +10,10 @@
     ".": {
       "import": "./dist/elements/index.js",
       "types": "./dist/types/elements/index.d.ts"
+    },
+    "./*": {
+      "import": "./dist/elements/*",
+      "types": "./dist/types/elements/*/*.d.ts"
     }
   },
   "files": [
