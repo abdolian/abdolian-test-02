@@ -1,3 +1,9 @@
+## [2.3.7](https://github.com/abdolian/abdolian-test-02/compare/v2.3.6...v2.3.7) (2024-10-31)
+
+### Bug Fixes
+
+* add json/document.json ([cc7581e](https://github.com/abdolian/abdolian-test-02/commit/cc7581e0909c418c19560be5ca2e0be5eedc26a4))
+
 ## [2.3.6](https://github.com/abdolian/abdolian-test-02/compare/v2.3.5...v2.3.6) (2024-10-31)
 
 ### Bug Fixes
