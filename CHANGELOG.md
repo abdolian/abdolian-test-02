@@ -1,3 +1,10 @@
+## [2.2.0](https://github.com/abdolian/abdolian-test-02/compare/v2.1.1...v2.2.0) (2024-10-31)
+
+### Features
+
+* remove lock ([c3c0aaa](https://github.com/abdolian/abdolian-test-02/commit/c3c0aaa39e2fc1a831ec25229b7b2950fb9ccb93))
+* trying ([07fdc22](https://github.com/abdolian/abdolian-test-02/commit/07fdc2221520443bc05c508a1c9f75b819afe75e))
+
 ## [2.1.1](https://github.com/abdolian/abdolian-test-02/compare/v2.1.0...v2.1.1) (2024-10-22)
 
 ### Bug Fixes
