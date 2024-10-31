@@ -1,3 +1,9 @@
+## [2.3.1](https://github.com/abdolian/abdolian-test-02/compare/v2.3.0...v2.3.1) (2024-10-31)
+
+### Bug Fixes
+
+* add /*/* ([30f117f](https://github.com/abdolian/abdolian-test-02/commit/30f117fe3c5c73288b1e8d7aa91e96a0c1b83de3))
+
 ## [2.3.0](https://github.com/abdolian/abdolian-test-02/compare/v2.2.1...v2.3.0) (2024-10-31)
 
 ### Features
