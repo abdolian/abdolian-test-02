@@ -1,3 +1,9 @@
+## [2.3.4](https://github.com/abdolian/abdolian-test-02/compare/v2.3.3...v2.3.4) (2024-10-31)
+
+### Bug Fixes
+
+* add json/* ([deae57a](https://github.com/abdolian/abdolian-test-02/commit/deae57ab754e61290fe6d530bf222fb279269fe1))
+
 ## [2.3.3](https://github.com/abdolian/abdolian-test-02/compare/v2.3.2...v2.3.3) (2024-10-31)
 
 ### Bug Fixes
