@@ -20,7 +20,6 @@
       "import": "./dist/core/config.js",
       "types": "./dist/types/config/index.d.ts"
     },
-    "./json/*": "./dist/json/*",
     "./package.json": "./package.json"
   },
   "files": [
