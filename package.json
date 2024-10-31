@@ -15,7 +15,11 @@
       "import": "./dist/elements/*",
       "types": "./dist/types/elements/*/*.d.ts"
     },
-    "./*/*": "./dist/elements/*/*"
+    "./*/*": "./dist/elements/*/*",
+    "./config.js": {
+      "import": "./dist/core/config.js",
+      "types": "./dist/types/config/index.d.ts"
+    }
   },
   "files": [
     "./dist/*",
