@@ -1,3 +1,9 @@
+## [2.3.8](https://github.com/abdolian/abdolian-test-02/compare/v2.3.7...v2.3.8) (2026-01-03)
+
+### Bug Fixes
+
+* update ([0bc5ea1](https://github.com/abdolian/abdolian-test-02/commit/0bc5ea1ec4fb4201fa8082d9e14ca14c0aa629a9))
+
 ## [2.3.7](https://github.com/abdolian/abdolian-test-02/compare/v2.3.6...v2.3.7) (2024-10-31)
 
 ### Bug Fixes
